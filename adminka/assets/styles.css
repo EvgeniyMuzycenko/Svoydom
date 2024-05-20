@@ -110,7 +110,7 @@ content > article
 {
 	width: 85%;
 	background-color: #fff;
-	height-min: 400px;
+	min-height: 400px;
 	padding: 20px;
 	
 }
