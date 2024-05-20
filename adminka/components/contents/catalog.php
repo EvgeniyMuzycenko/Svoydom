@@ -1,23 +1,23 @@
 <content>
-	<nav>
-		<a href="dashboard.php">Главная панель</a>
-		<a href="users.php">Пользователи</a>
-		<a href="catalog.php">Каталог</a>
-		<a href="projects.php">Проекты</a>
-		<a href="orders.php">Заказы</a>
-		<a href="gallery.php">Галерея</a>
-	</nav>
-	<article>
-		<h2>Каталоги</h2>
-		<div class="reg_form">
-			<h3>Добавить каталог</h3>
-			<form method="POST" enctype="multipart/form-data">
-				<input type="text" name="name_cat" placeholder="Наименование">
-				Изображение:<br>
-				<input type="file" name="img_cat">
-				<input type="submit" name="add_cat" value="Добавить каталог">
+  <nav>
+    <a href="dashboard.php">Главная панель</a>
+    <a href="users.php">Пользователи</a>
+    <a href="catalog.php">Каталог</a>
+    <a href="projects.php">Проекты</a>
+    <a href="orders.php">Заказы</a>
+    <a href="gallery.php">Галерея</a>
+  </nav>
+  <article>
+    <h2>Каталоги</h2>
+    <div class="reg_form">
+      <h3>Добавить каталог</h3>
+      <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="name_cat" placeholder="Наименование">
+        Изображение:<br>
+        <input type="file" name="img_cat">
+        <input type="submit" name="add_cat" value="Добавить каталог">
 
-		<?php
+        <?php
 			$name_cat=$_POST['name_cat'];	
 			$img_cat=$_POST['img_cat'];
       $add_cat=$_POST['add_cat'];
@@ -56,18 +56,18 @@
 		}
 	}
 		?>
-			</form>
-		</div>
+      </form>
+    </div>
 
-		<table>
-			<tr>
-				<th>№ п/п</th>
-				<th>Наименование</th>
-				<th>Изображение</th>
-				<th>Статус</th>
-				<th colspan="3">Действия</th>
-			</tr>
-<?php
+    <table>
+      <tr>
+        <th>№ п/п</th>
+        <th>Наименование</th>
+        <th>Изображение</th>
+        <th>Статус</th>
+        <th colspan="3">Действия</th>
+      </tr>
+      <?php
 			$out_lim=$_GET['p']*6;
 
 			$str_out_cat_all="SELECT * FROM `catalog`";
@@ -119,9 +119,9 @@
        			";
        	}
 ?>
-	</table>
-		<div class="pagination">
-			<?php
+    </table>
+    <div class="pagination">
+      <?php
 				$qty1=$num_rows_cat/6;
 				$qty2=floor($qty1);
 				$qty3=$num_rows_cat%6;
@@ -136,6 +136,6 @@
 					echo "<a href=?p=$i>$p</a>";
 				}
 			?>
-		</div>
-	</article>
+    </div>
+  </article>
 </content>

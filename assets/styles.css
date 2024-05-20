@@ -233,9 +233,7 @@ nav ul li:hover .submenu {
     text-decoration: none;
     font-size: 20px;
     font-family: "Inter-Bold";
-    /*меняем шрифт*/
     line-height: 40px;
-    /*ровняем меню по вертикали*/
     outline: none;
     transition: 0.2s linear;
   }
@@ -354,18 +352,18 @@ content {
 
 .advantages b {
   font-size: 32px;
-  font-family: 'Inter-bold';
+  font-family: "Inter-bold";
   color: #f67a34;
 }
 
 .advantages p {
-  font-family: 'Inter-bold';
+  font-family: "Inter-bold";
   font-size: 20px;
   text-align: center;
 }
 
 .advantages sup {
-  font-family: 'Inter-bold';
+  font-family: "Inter-bold";
   font-size: 20px;
   color: #f67a34;
 }
@@ -423,7 +421,7 @@ content {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 /*слайдер*/
@@ -599,7 +597,7 @@ h3 {
 }
 
 .text_about li {
-  font-family: 'Inter-bold';
+  font-family: "Inter-bold";
 }
 
 /*КОНТАКТЫ*/
@@ -845,8 +843,9 @@ footer {
   display: flex;
   height: 70px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #eaeaea;
+  padding: 0px 50px;
 }
 
 .media {
@@ -871,8 +870,8 @@ footer {
     padding: 0px 20px;
   }
   .media img {
-  margin: 0px 5px;
-  width: 30px;
+    margin: 0px 5px;
+    width: 30px;
   }
 }
 

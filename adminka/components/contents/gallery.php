@@ -1,22 +1,22 @@
 <content>
-	<nav>
-		<a href="dashboard.php">Главная панель</a>
-		<a href="users.php">Пользователи</a>
-		<a href="catalog.php">Каталог</a>
-		<a href="projects.php">Проекты</a>
-		<a href="orders.php">Заказы</a>
-		<a href="gallery.php">Галерея</a>
-	</nav>
-	<article>
-		<h2>Галерея</h2>
-		<div class="reg_form">
-			<h3>Добавить изображение в галерею</h3>
-			<form method="POST" enctype="multipart/form-data">
-				Изображение:<br>
-				<input type="file" name="img_gal">
-				<input type="submit" name="add_gal" value="Добавить изображение">
+  <nav>
+    <a href="dashboard.php">Главная панель</a>
+    <a href="users.php">Пользователи</a>
+    <a href="catalog.php">Каталог</a>
+    <a href="projects.php">Проекты</a>
+    <a href="orders.php">Заказы</a>
+    <a href="gallery.php">Галерея</a>
+  </nav>
+  <article>
+    <h2>Галерея</h2>
+    <div class="reg_form">
+      <h3>Добавить изображение в галерею</h3>
+      <form method="POST" enctype="multipart/form-data">
+        Изображение:<br>
+        <input type="file" name="img_gal">
+        <input type="submit" name="add_gal" value="Добавить изображение">
 
-		<?php
+        <?php
 			$img_gal=$_POST['img_gal'];
       $add_gal=$_POST['add_gal'];
 
@@ -49,17 +49,17 @@
 		}
 	}
 		?>
-			</form>
-		</div>
+      </form>
+    </div>
 
-		<table>
-			<tr>
-				<th>№ п/п</th>
-				<th>Изображение</th>
-				<th>Статус</th>
-				<th colspan="3">Действия</th>
-			</tr>
-<?php
+    <table>
+      <tr>
+        <th>№ п/п</th>
+        <th>Изображение</th>
+        <th>Статус</th>
+        <th colspan="3">Действия</th>
+      </tr>
+      <?php
 			$out_lim=$_GET['p']*6;
 
 			$str_out_gal_all="SELECT * FROM `gallery`";
@@ -104,9 +104,9 @@
        			";
        	}
 ?>
-	</table>
-		<div class="pagination">
-			<?php
+    </table>
+    <div class="pagination">
+      <?php
 				$qty1=$num_rows_gal/6;
 				$qty2=floor($qty1);
 				$qty3=$num_rows_gal%6;
@@ -121,6 +121,6 @@
 					echo "<a href=?p=$i>$p</a>";
 				}
 			?>
-		</div>
-	</article>
+    </div>
+  </article>
 </content>

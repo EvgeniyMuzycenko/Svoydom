@@ -1,15 +1,15 @@
 <content>
-	<nav>
-		<a href="dashboard.php">Главная панель</a>
-		<a href="users.php">Пользователи</a>
-		<a href="catalog.php">Каталог</a>
-		<a href="projects.php">Проекты</a>
-		<a href="orders.php">Заказы</a>
-		<a href="gallery.php">Галерея</a>
-	</nav>
-	<article>
-		<h2>Заказы</h2>
-		<?php
+  <nav>
+    <a href="dashboard.php">Главная панель</a>
+    <a href="users.php">Пользователи</a>
+    <a href="catalog.php">Каталог</a>
+    <a href="projects.php">Проекты</a>
+    <a href="orders.php">Заказы</a>
+    <a href="gallery.php">Галерея</a>
+  </nav>
+  <article>
+    <h2>Заказы</h2>
+    <?php
 		/*ВЫВОДИМ КОЛИЧЕСТВО УНИКАЛЬНЫХ КЛИЕТОВ*/
 			$out_lim=$_GET['p']*2;
 
@@ -34,7 +34,7 @@
 				<table>
 				<tr>
 					<th>№ п/п</th>
-					<th>Товар</th>
+					<th>Проект</th>
 					<th>Статус</th>
 					<th>Время заказа</th>
 					<th>Время <br>изменения заказа</th>
@@ -129,12 +129,12 @@
 				$status=$out_proj_order['status'];
        			switch ($status) {
        				case '1':
-       					$status="Заказан";
-       					$action_text="Отменить";
+       					$status="Активен";
+       					$action_text="Скрыть";
        					break;
        				case '0':
-       					$status="Не заказан";
-       					$action_text="Заказать";
+       					$status="Скрыт";
+       					$action_text="Показать";
        					break;
        				default:
        					// code...
@@ -168,8 +168,8 @@
 			echo "</table>";
 			}
 		?>
-		<div class="pagination">
-	<?php
+    <div class="pagination">
+      <?php
 		$qty1=$num_rows_users/2;
 		$qty2=floor($qty1);
 		$qty3=$num_rows_users%2;
@@ -184,7 +184,7 @@
 			echo "<a href=?p=$i>$p</a>";
 		}
 	?>
-		</div>
-	</article>
+    </div>
+  </article>
 
 </content>

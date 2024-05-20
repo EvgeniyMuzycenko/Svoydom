@@ -60,7 +60,10 @@ header,footer
 	justify-content: space-between;
 	padding: 20px;
 	color: #fff;
+}
 
+header a {
+	margin: 0px 10px;
 }
 
 footer {

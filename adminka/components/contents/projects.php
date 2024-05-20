@@ -1,28 +1,28 @@
 <content>
-	<nav>
-		<a href="dashboard.php">Главная панель</a>
-		<a href="users.php">Пользователи</a>
-		<a href="catalog.php">Каталог</a>
-		<a href="projects.php">Проекты</a>
-		<a href="orders.php">Заказы</a>
-		<a href="gallery.php">Галерея</a>
-	</nav>
-	<article>
-		<h2>Проекты</h2>
-		<div class="reg_form">
-			<h3>Добавить проект</h3>
-			<form method="POST" enctype="multipart/form-data">
-				<input type="text" name="name_proj" placeholder="Наименование проекта">
-				<input type="number" name="code" placeholder="Код проекта">
-				<input type="text" name="type_of_house" placeholder="Тип">
-				<input type="number" name="num_of_floors" placeholder="Кол-во этажей">
-				<input type="text" name="total_area" placeholder="Общая площадь">
-				<input type="text" name="materials" placeholder="Материал">
-				<input type="text" name="dimensions" placeholder="Габариты">
-				<input type="number" name="price" placeholder="Цена"><br>
-				Выберите категорию
-				<br><select name="id_cat">
-					<?php
+  <nav>
+    <a href="dashboard.php">Главная панель</a>
+    <a href="users.php">Пользователи</a>
+    <a href="catalog.php">Каталог</a>
+    <a href="projects.php">Проекты</a>
+    <a href="orders.php">Заказы</a>
+    <a href="gallery.php">Галерея</a>
+  </nav>
+  <article>
+    <h2>Проекты</h2>
+    <div class="reg_form">
+      <h3>Добавить проект</h3>
+      <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="name_proj" placeholder="Наименование проекта">
+        <input type="number" name="code" placeholder="Код проекта">
+        <input type="text" name="type_of_house" placeholder="Тип">
+        <input type="number" name="num_of_floors" placeholder="Кол-во этажей">
+        <input type="text" name="total_area" placeholder="Общая площадь">
+        <input type="text" name="materials" placeholder="Материал">
+        <input type="text" name="dimensions" placeholder="Габариты">
+        <input type="number" name="price" placeholder="Цена"><br>
+        Выберите категорию
+        <br><select name="id_cat">
+          <?php
 					$str_out_cat="SELECT * FROM `catalog`";
 					$run_out_cat=mysqli_query($connect,$str_out_cat);
 
@@ -32,15 +32,15 @@
 						";
 					}
 					?>
-					
-				</select><br><br>
-				Изображение:<br>
-				<input type="file" name="img_proj">
-				<input type="file" name="img_fp">
-				<textarea name="description" placeholder="Описание"></textarea><br>
-				<input type="submit" name="add_proj" value="Добавить проект">
 
-				<?php
+        </select><br><br>
+        Изображение:<br>
+        <input type="file" name="img_proj">
+        <input type="file" name="img_fp">
+        <textarea name="description" placeholder="Описание"></textarea><br>
+        <input type="submit" name="add_proj" value="Добавить проект">
+
+        <?php
 				$name_proj=$_POST['name_proj'];
 				$price=$_POST['price'];
 				$code=$_POST['code'];
@@ -98,27 +98,27 @@
 		}
 	?>
 
-	</form>
-</div>
-<table>
-	<tr>
-		<th>№ п/п</th>
-		<th>Код проекта</th>
-		<th>Наименование</th>
-		<th>Цена</th>
-		<th>Категория</th>
-		<th>Фасад</th>
-		<th>План этажа</th>
-		<th>Тип</th>
-		<th>Кол-во этажей</th>
-		<th>Общая площадь</th>
-		<th>Материал стен</th>
-		<th>Габариты</th>
-		<th>Описание</th>
-		<th>Статус</th>
-		<th colspan="3">Действия</th>
-	</tr>
-	<?php
+      </form>
+    </div>
+    <table>
+      <tr>
+        <th>№ п/п</th>
+        <th>Код проекта</th>
+        <th>Наименование</th>
+        <th>Цена</th>
+        <th>Категория</th>
+        <th>Фасад</th>
+        <th>План этажа</th>
+        <th>Тип</th>
+        <th>Кол-во этажей</th>
+        <th>Общая площадь</th>
+        <th>Материал стен</th>
+        <th>Габариты</th>
+        <th>Описание</th>
+        <th>Статус</th>
+        <th colspan="3">Действия</th>
+      </tr>
+      <?php
 	$out_lim=$_GET['p']*6;
 
 	$str_out_proj_all="SELECT * FROM `projects`";
@@ -183,9 +183,9 @@
 		";
 	}
 	?>
-</table>
-<div class="pagination">
-	<?php
+    </table>
+    <div class="pagination">
+      <?php
 		$qty1=$num_rows_proj/6;
 		$qty2=floor($qty1);
 		$qty3=$num_rows_proj%6;
@@ -200,6 +200,6 @@
 			echo "<a href=?p=$i>$p</a>";
 		}
 	?>
-</div>
-</article>
+    </div>
+  </article>
 </content>

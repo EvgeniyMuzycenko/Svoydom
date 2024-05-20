@@ -1,17 +1,19 @@
 <content>
-<div class="title"><h2>Мои заказы</h2></div>
-		<div class="profile">
-		<div class="table_orders">
-			<table border="1px" width="1000px">
-				<tr>
-					<th>№ п/п</th>
-					<th>Товар</th>
-					<th>Картинка</th>
-					<th>Время заказа</th>
-					<th>Время изменения заказа</th>
-					<th>Действия</th>
-				</tr>
-			<?php
+  <div class="title">
+    <h2>Мои заказы</h2>
+  </div>
+  <div class="profile">
+    <div class="table_orders">
+      <table border="1px" width="1000px">
+        <tr>
+          <th>№ п/п</th>
+          <th>Проект</th>
+          <th>Изображение</th>
+          <th>Время заказа</th>
+          <th>Время изменения заказа</th>
+          <th>Действия</th>
+        </tr>
+        <?php
 				$user_id=$_SESSION['client']['id'];
 				$str_out_orders="SELECT * FROM `orders` WHERE user_id=$user_id";
 				$run_out_orders=mysqli_query($connect,$str_out_orders);
@@ -110,7 +112,7 @@
 					";
 			}
 			?>
-			</table>
-		</div>
-	</div>
+      </table>
+    </div>
+  </div>
 </content>

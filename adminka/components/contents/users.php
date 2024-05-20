@@ -1,33 +1,33 @@
 <content>
-	<nav>
-		<a href="dashboard.php">Главная панель</a>
-		<a href="users.php">Пользователи</a>
-		<a href="catalog.php">Каталог</a>
-		<a href="projects.php">Проекты</a>
-		<a href="orders.php">Заказы</a>
-		<a href="gallery.php">Галерея</a>
-	</nav>
-	<article>
-		<h2>Пользователи</h2>
-		<div class="reg_form">
-			<h3>Добавить пользователя</h3>
-			<form method="POST" enctype="multipart/form-data" action="controllers/registration.php">
-				<input type="text" name="fam" placeholder="Фамилия">
-				<input type="text" name="name" placeholder="Имя">
-				<input type="text" name="l_name" placeholder="Отчество">
-				<input type="date" name="birthday" placeholder="Дата рождения">
-				<input type="text" name="mail" placeholder="Электронная почта">
-				<input type="text" name="login" placeholder="Логин">
-				<input type="password" name="pass" placeholder="Пароль">
-				<input type="password" name="repass" placeholder="Повторите пароль">
-				<input type="radio" name="gender" value="m">М<br>
-				<input type="radio" name="gender" value="f">Ж<br>
-				Аватар:<br>
-				<input type="file" name="avatar">
-				<textarea name="about_user" placeholder="О себе..."></textarea><br>
-				<input type="submit" name="add_user" value="Добавить пользователя">
-			</form>
-		<?php
+  <nav>
+    <a href="dashboard.php">Главная панель</a>
+    <a href="users.php">Пользователи</a>
+    <a href="catalog.php">Каталог</a>
+    <a href="projects.php">Проекты</a>
+    <a href="orders.php">Заказы</a>
+    <a href="gallery.php">Галерея</a>
+  </nav>
+  <article>
+    <h2>Пользователи</h2>
+    <div class="reg_form">
+      <h3>Добавить пользователя</h3>
+      <form method="POST" enctype="multipart/form-data" action="controllers/registration.php">
+        <input type="text" name="fam" placeholder="Фамилия">
+        <input type="text" name="name" placeholder="Имя">
+        <input type="text" name="l_name" placeholder="Отчество">
+        <input type="date" name="birthday" placeholder="Дата рождения">
+        <input type="text" name="mail" placeholder="Электронная почта">
+        <input type="text" name="login" placeholder="Логин">
+        <input type="password" name="pass" placeholder="Пароль">
+        <input type="password" name="repass" placeholder="Повторите пароль">
+        <input type="radio" name="gender" value="m">М<br>
+        <input type="radio" name="gender" value="f">Ж<br>
+        Аватар:<br>
+        <input type="file" name="avatar">
+        <textarea name="about_user" placeholder="О себе..."></textarea><br>
+        <input type="submit" name="add_user" value="Добавить пользователя">
+      </form>
+      <?php
 		if ($_SESSION['error']) {
 			$color_mess="red"; 
 		}
@@ -35,33 +35,33 @@
 			$color_mess="green";
 		}
 		?>
-		<font color="<?=$color_mess?>">
-		<?php 
+      <font color="<?=$color_mess?>">
+        <?php 
 			echo $_SESSION['message'];
 			echo $_SESSION['error'];
 
 			unset($_SESSION['message']);
 			unset($_SESSION['error']);
 		?>
-		</font>
-		</div>
-		<table>
-			<tr>
-				<th>№ п/п</th>
-				<th>Фамилия</th>
-				<th>Имя</th>
-				<th>Отчество</th>
-				<th>Дата рождения</th>
-				<th>Логин</th>
-				<th>Почта</th>
-				<th>Пол</th>
-				<th>Аватар</th>
-				<th>Обо мне</th>
-				<th>Роль</th>
-				<th>Статус</th>
-				<th colspan="3">Действия</th>
-			</tr>
-			<?php
+      </font>
+    </div>
+    <table>
+      <tr>
+        <th>№ п/п</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Дата рождения</th>
+        <th>Логин</th>
+        <th>Почта</th>
+        <th>Пол</th>
+        <th>Аватар</th>
+        <th>Обо мне</th>
+        <th>Роль</th>
+        <th>Статус</th>
+        <th colspan="3">Действия</th>
+      </tr>
+      <?php
 				$out_lim=$_GET['p']*5;
 
 				$str_out_users_all="SELECT * FROM `users`";
@@ -154,9 +154,9 @@
 				}
 			?>
 
-		</table>
-		<div class="pagination">
-			<?php
+    </table>
+    <div class="pagination">
+      <?php
 				$qty1=$num_rows_users/5;
 				$qty2=floor($qty1);
 				$qty3=$num_rows_users%5;
@@ -171,6 +171,6 @@
 					echo "<a href=?p=$i>$p</a>";
 				}
 			?>
-		</div>
-	</article>
+    </div>
+  </article>
 </content>
