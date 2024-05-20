@@ -202,7 +202,7 @@ nav ul li:hover .submenu {
 @media (max-width: 1024px) {
   .main_menu a {
     font-size: 16px;
-    padding: 0px 50px;
+    padding: 0px 40px;
   }
 }
 
@@ -229,7 +229,6 @@ nav ul li:hover .submenu {
   }
 
   .burger-slide a {
-    padding: 0px 70px;
     text-decoration: none;
     font-size: 20px;
     font-family: "Inter-Bold";
@@ -242,8 +241,7 @@ nav ul li:hover .submenu {
     border: none;
     outline: none;
     background-color: transparent;
-    padding: 10px 0px;
-    margin-right: 10px;
+    padding: 10px 30px;
     cursor: pointer;
   }
 
@@ -275,6 +273,12 @@ content {
   padding-top: 26px;
   font-size: 26px;
   line-height: 16px;
+}
+
+@media (max-width: 650px) {
+  .title h2 {
+    font-size: 22px;
+  }
 }
 
 /*главная страница*/
@@ -487,21 +491,21 @@ content {
 /*адаптация под мобильные устройства*/
 @media (max-width: 850px) {
   .slider {
-    height: 300px;
+    height: 350px;
   }
 
   .slider .item img {
-    height: 300px;
+    height: 350px;
   }
 }
 
 @media (max-width: 650px) {
   .slider {
-    height: 200px;
+    height: 300px;
   }
 
   .slider .item img {
-    height: 200px;
+    height: 300px;
   }
 
   .slider .previous,
@@ -512,11 +516,11 @@ content {
 
 @media (max-width: 500px) {
   .slider {
-    height: 180px;
+    height: 250px;
   }
 
   .slider .item img {
-    height: 180px;
+    height: 250px;
   }
 
   .slider .previous,
@@ -641,6 +645,13 @@ h3 {
   }
 }
 
+@media (max-width: 390px) {
+  .contacts iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 /*ПРОФИЛЬ*/
 .profile {
   display: flex;
@@ -758,6 +769,7 @@ h3 {
 .edit_form {
   display: flex;
   justify-content: center;
+  text-align: center;
   padding-top: 15px;
   color: #6c6c74;
 }

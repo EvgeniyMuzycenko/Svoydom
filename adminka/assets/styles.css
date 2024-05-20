@@ -1,12 +1,10 @@
-*
-{
+* {
 	margin: 0px;
 	padding: 0px;
 	font-family: "Inter";
-
 }
-body
-{
+
+body {
 	background-image: url(../../assets/images/custom/bg.png);
 	display: flex;
 	align-items: center;
@@ -14,24 +12,20 @@ body
 	font-family: "Inter";
 }
 
-.wrapper
-{
-	min-height: 500px;
+.wrapper {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	background-color: orange;
 }
 
-.db_panel
-{
+.db_panel {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-.panel
-{
+.panel {
 	width: 300px;
 	height: 150px;
 	background-color: #F67A34;
@@ -45,25 +39,43 @@ body
 	font-size: 25px;
 }
 
-.panel > p
-{
+@media (max-width: 650px) {
+	.panel {
+		width: 200px;
+		height: 100px;
+		font-size: 16px;
+	}
+}
+
+.panel > p {
 	font-size: 40px;
 }
 
-
-header,footer
-
-{
+header,footer {
 	height: 20px;
 	background-color: #6C6C74;
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
 	color: #fff;
+	font-size: 16px;
 }
 
 header a {
 	margin: 0px 10px;
+	color: #fff;
+}
+
+header a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (max-width: 680px) {
+	header,footer {
+		font-size: 12px;
+		text-align: center;
+	}
 }
 
 footer {
@@ -78,9 +90,8 @@ content {
 }
 
 content > nav {
-	width: 15%;
+	width: 25%;
 	background-color: #6C6C74;
-	min-height: 400px;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	display: flex;
@@ -92,68 +103,66 @@ content > nav > a {
 	color: #fff;
 	text-decoration: none;
 	display: block;
-	padding: 10px;
+	padding: 10px 20px;
 	width: 100%;
 	text-align: center;
-	
 }
 
-content > nav > a:hover
-{
+content > nav > a:hover {
 	color: #000;
 	background-color: #fff;
 	text-decoration: none;
 	padding: 10px;	
 }
 
-content > article
-{
-	width: 85%;
-	background-color: #fff;
-	min-height: 400px;
-	padding: 20px;
-	
+@media (max-width: 680px) {
+	content > nav > a {
+		font-size: 12px;
+	}
 }
 
-content > article table,td,th
-{
+
+content > article {
+	width: 85%;
+	background-color: #fff;
+	padding: 20px;
+}
+
+content > article table,td,th {
 	border: 1px solid grey;
 	border-collapse: collapse;
 	text-align: center;
 	padding: 3px;
 }
 
-content > article td
-{
+content > article td {
 	height: 40px;
 	
 }
 
-content > article >table
-{
+content > article >table {
 	width: 100%;
 	margin-top: 20px;
 	font-size: 14px;
 }
 
-.off
-{
+.off {
 	color: #fff;
 	text-decoration: none;
 	background-color: #c000ff;
 	padding: 5px;
 	border-radius: 5px;
 }
-.change
-{
+
+.change {
 	color: #fff;
 	text-decoration: none;
 	background-color: blue;
 	padding: 5px;
 	border-radius: 5px;
 }
-.delete
-{
+
+.delete {
 	color: #fff;
 	text-decoration: none;
 	background-color: red;
@@ -161,25 +170,23 @@ content > article >table
 	border-radius: 5px;
 }
 
-.off:hover
-{
+.off:hover {
 	background-color: #750999;
 }
-.change:hover
-{
+
+.change:hover {
 	background-color:#07078d;
 }
-.delete:hover
-{
+
+.delete:hover {
 	background-color: #a70000;
 }
 
-.reg_form,.edit_form
-{
+.reg_form,.edit_form {
   margin: 15px auto;
 }
-.reg_form input,.edit_form input
-{
+
+.reg_form input,.edit_form input {
   width: 280px;
   height: 30px;
   display: block;
@@ -188,30 +195,26 @@ content > article >table
   padding: 0px 10px;
 }
 
-.reg_form input[type="radio"],.edit_form input[type="radio"]
-{
+.reg_form input[type="radio"],.edit_form input[type="radio"] {
   height: 18px;
   width: 25px;
   display: inline-block;
   margin-bottom: 7px;
 }
 
-.reg_form input[type="submit"],.edit_form input[type="submit"]
-{
+.reg_form input[type="submit"],.edit_form input[type="submit"] {
   width: 303px;
   height: 50px;
   cursor: pointer;
 }
 
-.reg_form select
-{
+.reg_form select {
 	width: 303px;
   	height: 50px;
   	font-size: 18px;
 }
 
-.pagination
-{
+.pagination {
   display: flex;
   justify-content: center;
   word-spacing: 10px;
@@ -219,20 +222,17 @@ content > article >table
  
 }
 
-.pagination > a
-{
+.pagination > a {
 	margin-left: 10px;
 	text-decoration: none;
 	color: #377796;
 }
 
-.pagination > a:hover
-{
+.pagination > a:hover {
 	text-decoration: underline;
 }
 
-.reg_form textarea,.edit_form textarea
-{
+.reg_form textarea,.edit_form textarea {
   width: 280px;
   height: 70px;
   padding: 5px 10px;
@@ -240,18 +240,7 @@ content > article >table
   
 }
 
-header a
-{
-	color: #fff;
-}
-
-header a:hover
-{
-	color: #fff;
-	text-decoration: none;
-}
-.auth
-{
+.auth {
 	width: 400px;
 	height: 400px;
 	background-color: #6C6C74;
@@ -263,11 +252,9 @@ header a:hover
 	text-align: center;
 	color: #fff;
 	margin:8% 20%;
-
 }
 
-.auth input
-{
+.auth input {
 	width: 200px;
 	height: 30px;
 	outline: none;
@@ -278,13 +265,11 @@ header a:hover
 	margin-top: 20px;
 }
 
-.auth input[type="submit"]
-{
+.auth input[type="submit"] {
 	width: 218px;
 }
 
-.auth input[type="submit"]:hover
-{
+.auth input[type="submit"]:hover {
 	background-color: #c3c3c3;
 	cursor: pointer;
 }

@@ -18,8 +18,7 @@
       <input type="file" name="avatar">
       <textarea name="about_user" placeholder="О себе..."></textarea><br>
       <input type="submit" name="reg" value="Регистрация">
-    </form>
-    <?php
+      <?php
 		if ($_SESSION['error']) {
 			$color_mess="red"; 
 		}
@@ -27,14 +26,15 @@
 			$color_mess="green";
 		}
 		?>
-    <font color="<?=$color_mess?>">
-      <?php 
+      <font color="<?=$color_mess?>">
+        <?php 
 				echo $_SESSION['message'];
 				echo $_SESSION['error'];
 				
 				unset($_SESSION['message']);
 				unset($_SESSION['error']);
 			?>
-    </font>
+      </font>
+    </form>
   </div>
 </content>

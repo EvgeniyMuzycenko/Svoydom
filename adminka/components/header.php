@@ -27,11 +27,14 @@ session_start();
       <div class="name_admin">
         Панель администратора
       </div>
-      <div class="welcome">
+      <div class="site_name">
         СВОЙ ДОМ
       </div>
-      <div>
-        Привет, <?=$out_user['login'];?> <a href="controllers/exit.php">Перейти на сайт</a>
+      <div class="greetings">
+        Привет, <?=$out_user['login'];?>
+      </div>
+      <div class="header_links">
+        <a href="controllers/exit.php">Перейти на сайт</a>
         <a href="controllers/exit.php">Выход</a>
       </div>
     </header>

@@ -22,16 +22,12 @@
 
 	$str_add_user="INSERT INTO `users`(`login`, `password`, `fam`, `name`, `l_name`, `birthday`, `mail`, `gender`, `avatar`, `about_user`) VALUES ('$login','$pass','$fam','$name','$l_name','$birthday','$mail','$gender','$name_img_avatar','$about_user');";
 
-	echo $str_add_user;
-
 	$date1=date("Y-m-d", strtotime("-18 years"));
 	$date2=strtotime($date1);
 
 	$date3=date("Y-m-d", strtotime("-80 years"));
 	$date4=strtotime($date3);
 	
-	echo $date1;
-
 	if ($fam AND $name AND $l_name AND $birthday AND $mail AND $login AND $pass AND $repass AND $gender) {
 		if ($pass==$repass) {
 			if (strtotime($birthday) < $date2 AND strtotime($birthday) > $date4) {
