@@ -78,6 +78,12 @@ header a:hover {
 	}
 }
 
+@media (max-width: 1400px) {
+	article {
+		overflow: scroll;
+	}
+}
+
 footer {
 	justify-content: center;
 }
@@ -120,7 +126,6 @@ content > nav > a:hover {
 		font-size: 12px;
 	}
 }
-
 
 content > article {
 	width: 85%;

@@ -744,6 +744,7 @@ h3 {
 .table_orders {
   padding-left: 30px;
   padding-bottom: 30px;
+  overflow: scroll;
 }
 
 .table_orders table {
